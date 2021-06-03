@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Make New Directory</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for mkdir {permSEM}"><tr><td>mkdir {permSEM}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Make New Directory</h2>
+
+<h3>Description</h3>
+
+<p>Make a new directory, same with linux 'mkdir'.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+mkdir(path = NULL)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>path</code></td>
+<td>
+<p>the full path of the directory you want to creat, or the subdirectory that you want to creat under current working directory [<code>getwd()</code>]</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+mkdir(paste(getwd(),'/dir1/dir2',sep=''))
+mkdir('dir2')
+mkdir('dir3/dir1')
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>permSEM</em> version 0.1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

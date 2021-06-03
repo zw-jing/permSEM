@@ -1,0 +1,4 @@
+exportPattern("^[[:alpha:]]+")
+##Exports
+export(add.variance,delete.variables.in.model,effects.sem,extract.sem.model,find.best.fit.model,group.effects.sem,grouped.sem.effects.stat,grouped.sem.effects.stat.permute,grouped.sem.effects.stat.permute_strata,sem.effects.stat,SEM.total.effect.expression)
+

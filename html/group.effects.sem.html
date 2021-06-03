@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Fast Estimation of Slope and Intercept</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for resistance_unifrac {permSEM}"><tr><td>resistance_unifrac {permSEM}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Fast Estimation of Slope and Intercept</h2>
+
+<h3>Description</h3>
+
+<p>Calculate the slope and intercept of linear model.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+slope(X,Y,with.intercept=TRUE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>X</code></td>
+<td>
+<p>the x-axis coordinates of a linear model</p>
+</td></tr>
+<tr valign="top"><td><code>Y</code></td>
+<td>
+<p>the y-axis coordinates of a linear model</p>
+</td></tr>
+<tr valign="top"><td><code>with.intercept</code></td>
+<td>
+<p>logical. If TRUE, estimate the interceptof a linear model. Default TRUE</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+  #library(GUniFrac)
+  #library(picante)
+  #library(phangorn)
+  
+  #otu.tab=t(tab_pl)
+  #tree=read.tree("F:\土壤动物\土壤动物\data\椒江\plant\20191022\qiime-alpha\origin_files\trees_backup\cds.tre")
+  #otu.tab[is.na(otu.tab)]=0
+  #par(mfrow = c(1,2))
+  #plot(tree, show.node.label=TRUE)
+  #tree=midpoint(tree, node.labels = "support")
+  #plot(tree, show.node.label=TRUE)
+  #resistanc.unifrac=resistance_unifrac(sqrt(otu.tab), tree, alpha = c(0, 0.5, 1)) 
+  #unifrac=GUniFrac2(sqrt(otu.tab), tree, alpha = c(0, 0.5, 1)) 
+  #plot(unifrac$unifracs[,,3],resistanc.unifrac$unifracs[,,3])
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>permSEM</em> version 0.1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

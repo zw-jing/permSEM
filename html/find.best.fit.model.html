@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Fast Estimation of Slope and Intercept</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for partition_eigenvector {permSEM}"><tr><td>partition_eigenvector {permSEM}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Fast Estimation of Slope and Intercept</h2>
+
+<h3>Description</h3>
+
+<p>Calculate the slope and intercept of linear model.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+slope(X,Y,with.intercept=TRUE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>X</code></td>
+<td>
+<p>the x-axis coordinates of a linear model</p>
+</td></tr>
+<tr valign="top"><td><code>Y</code></td>
+<td>
+<p>the y-axis coordinates of a linear model</p>
+</td></tr>
+<tr valign="top"><td><code>with.intercept</code></td>
+<td>
+<p>logical. If TRUE, estimate the interceptof a linear model. Default TRUE</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+direction_v=rep(c(0,5),each=500)
+v=direction_v+runif(1000)
+re=partition_eigenvector(v,direction_v)
+plot(re$projection_v,re$vertical_v)
+a1=c(0,0,0,1,1,1)
+a2=c(1,1,1,0,0,0)
+a3=c(1,-1,0,1,-1,0)
+a4=c(-1,1,0,1,-1,0)
+
+b=c(1,2,3,4,5,6)
+d=c(-1,-5,2,5,3,-6)
+
+
+direction_v=cbind(a1,a2,a3,a4,0,0)
+eigen(direction_v)
+v=t(rbind(b,d))
+v=b
+re=partition_eigenvector(v,direction_v)
+re$projection_v*re$vertical_v
+re=partition_eigenvector(re$vertical_v,direction_v)
+re$projection_v+re$vertical_v
+re$projection_v*re$vertical_v
+
+partition_eigenvector(v,v)
+v
+
+partition_eigenvector(direction_v,direction_v)
+direction_v
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>permSEM</em> version 0.1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

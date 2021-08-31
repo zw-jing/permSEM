@@ -1,12 +1,14 @@
 Package: permSEM
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: Testing the significanes of direct/indirect effects derived from
+        LAVAAN SEMs
+Version: 0.1.1
+Author: Zhongwang Jing
+Maintainer: The package maintainer <zwjing_st@rcees.ac.cn>
+Description: (1) Testing the significanes direct/indirect/total effects of factor (or grouped factors) on other factor (or grouped factors)in SEMs paths [sem.effects.stat(), lavaan.path.stat()]; (2) Helping the users to build modelings [add.variance(), delete.variables.in.model()] more efficiently; (3) Helping the users to find the better/best fitting modelings based on the initial modelings [find.best.fit.model()] (4) See more detailed descriptions with "?lavaan.path.stat"
+License: GP-3
 Encoding: UTF-8
 LazyData: true
-Built: R 4.0.3; ; 2021-06-03 16:53:30 UTC; windows
+NeedsCompilation: no
+Packaged: 2021-08-31 20:04:41 UTC; King
+Depends: R (>= 3.5.0)
